@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1542184704 source:c:\users\bca\desktop\data_structures_lab\stack\main.c
+	<stdio.h>
+	<stdlib.h>
+
