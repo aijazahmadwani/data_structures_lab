@@ -37,7 +37,7 @@ void avg_rf_10yrs()
             for(j=0;j<months;j++)
             {
                 sum=sum+rainfall[i][j];
-                avg=sum/10;
+                avg=sum/years;
             }
         }
         printf("\nAverage rainfall of 10 years =%f",avg);
@@ -55,15 +55,19 @@ void display()
 
 void avg_evry_month()
 {
-    int i,j;
+    int s=0;
+    int i,j=0;
     float avg,sum=0;
-    for(j=0;j<months;j++)
-    {
+    for
+    for(i=0;i<years;i++){
 
-
-            sum=sum+rainfall[j][0];
-
+       sum=sum+rainfall[i][j];
     }
-    avg=sum/12;
-    printf("\nAverage of 1st month = %f",avg);
+    avg=sum/months;
+    s++;
+    printf("\nAverage of %d st month = %f",s,avg);
+    j++;
+    }
+
 }
+
