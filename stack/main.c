@@ -1,4 +1,7 @@
-
+/*
+AIJAZ AHMAD WANI
+IMCA Sem -II 18600006
+aijazahmad9864@gmail.com*/
 #include <stdio.h>
 #include <stdlib.h>
 int stk[30];
@@ -15,8 +18,8 @@ int main()
     switch(ch)
     {
     case 1:
-        printf("\n\nenter number to be pushed onto the stack");
-        scanf("%d",&n);
+        printf("\n\nenter number to be pushed onto the stack ");
+        scanf(" %d",&n);
         push(n);
         break;
     case 2:
@@ -24,17 +27,19 @@ int main()
         break;
     case 3:
         display();
+        getch();
         break;
     case 4:
         exit(0);
     default:
         printf("\ninvalid input.......Try again");
+        getch();
         break;
     }
-        getch();
+
 
     }
-getch();
+
 }
 void push(int  n)
 {
@@ -43,8 +48,15 @@ void push(int  n)
         printf("\nstack over flow");
         return;
     }
+    else
+    {
+
+
     top++;
     stk[top]=n;
+    printf("\n inserted successfully");
+    getch();
+    }
 
 }
 void display(void)
@@ -64,6 +76,10 @@ void pop(void)
         printf("\nno element to be popped");
         return;
     }
+    else{
     top--;
+    printf("\npopped successfully ");
+    getch();
+    }
 }
 
