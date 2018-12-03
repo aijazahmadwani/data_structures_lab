@@ -2,6 +2,7 @@
 Author: AIJAZ AHMAD WANI
 IMCA 2nd SEM
 aijazahmad9864@gmail.com
+Roll.No. 18600006
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,44 +23,41 @@ void calculation();
 void data();
 int main()
 {
-
     int choice;
     data();
     calculation();
     while(1)
     {
-
     system("cls");
     menu();
     printf("\nEnter your choice :");
     scanf("%d",&choice);
     switch(choice)
     {
-    case 1:
-        display();
-        break;
-    case 2:
-        avg_rainfall_each_year();
-        break;
-    case 3:
-        avg_rainfall_every_month();
-        break;
-    case 4:
-        heighest_avg_rainfall_decade();
-        break;
-    case 5:
-         heighest_avg_rainfall_of_month();
-        break;
-    case 6:
-        exit(0);
-    default :
-        printf("\nInvalid choice..........Try again");
+        case 1:
+            display();
+            break;
+        case 2:
+            avg_rainfall_each_year();
+            break;
+        case 3:
+            avg_rainfall_every_month();
+            break;
+        case 4:
+            heighest_avg_rainfall_decade();
+            break;
+        case 5:
+            heighest_avg_rainfall_of_month();
+            break;
+        case 6:
+            exit(0);
+        default :
+            printf("\nInvalid choice..........Try again");
     }
     getch();
     }
     return 0;
 }
-
 void menu()
 {
     printf("\n1. Display Rainfall Array");
@@ -70,7 +68,6 @@ void menu()
     printf("\n6. Exit");
     printf("\n\n\n\n*******************************************************");
 }
-
 void display()
 {
     printf("\tRainfall Array\n\n");
@@ -83,14 +80,12 @@ void display()
     printf("\n");
    }
 }
-
 void avg_rainfall_each_year()
 {
     printf("\nAverage rainfall of each year\n\n\n");
     for(i=0;i<years;i++)
         printf("Average rainfall of %d year = %d\n",i+1,arey[i]);
 }
-
 void heighest_avg_rainfall_decade()
 {
     int p;
@@ -100,18 +95,15 @@ void heighest_avg_rainfall_decade()
         if(arey[i]>max)
             max=arey[i];
             p=i;
-
     }
     printf("\nHighest avg. rainfall of decade = %d in year %d",max,p+1);
 }
-
 void avg_rainfall_every_month()
 {
     printf("\nAverage rainfall of every month over a period of %d years\n\n\n",years);
     for(i=0;i<months;i++)
         printf("\nAverage rainfall of %d month = %d",i+1,arem[i]);
 }
-
 void heighest_avg_rainfall_of_month()
 {
     int p;
@@ -126,7 +118,6 @@ void heighest_avg_rainfall_of_month()
     }
     printf("\nHighest average rainfall of month over last decade = %d of %d month",max,p+1);
 }
-
 void data()
 {
     printf("\nEnter data \n");
@@ -140,9 +131,8 @@ void data()
 }
 void calculation()
 {
-
 //average rainfall of each year
-        for(i=0;i<years;i++)
+    for(i=0;i<years;i++)
     {
         for(j=0;j<months;j++)
         {
@@ -154,10 +144,8 @@ void calculation()
         a++;
         sum=0;
     }
-
-
 //average rainfall of every month
-            sum=0,a=0;
+    sum=0,a=0;
     for(i=0;i<months;i++)
     {
         for(j=0;j<years;j++)
@@ -169,6 +157,5 @@ void calculation()
         arem[a]=avg;
         a++;
         sum=0;
-
     }
 }
