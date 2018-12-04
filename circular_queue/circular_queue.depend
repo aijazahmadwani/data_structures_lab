@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1543906416 source:c:\users\admin\desktop\data_structures(lab)\circular_queue\main.c
+	<stdio.h>
+	<stdlib.h>
+
